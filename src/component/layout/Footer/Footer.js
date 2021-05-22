@@ -2,7 +2,7 @@ import { Container, Typography } from "@material-ui/core";
 
 function Footer() {
   return (
-    <Container>
+    <Container style={{ paddingBottom: "32px" }}>
       <hr />
       <Typography variant="caption" color="textSecondary">
         Copyright ©2021 Barak and Bobsi, LLC B&B® Self-help services may not be
