@@ -1,7 +1,6 @@
 import { Box, Container, Grid, SvgIcon, Typography } from "@material-ui/core";
 import { Info } from "@material-ui/icons";
 
-import logo from "./asset/cabelim-logo.png";
 import header from "./asset/header.png";
 
 function Home() {
@@ -44,7 +43,7 @@ function Home() {
               alignItems="stretch"
               spacing={10}
             >
-              <Grid item xs={4}>
+              <Grid item md={4}>
                 <SvgIcon component={Info} fontSize="large" />
                 <Typography>
                   Diam sea invidunt elitr ut invidunt aliquyam ipsum dolore
@@ -52,7 +51,7 @@ function Home() {
                   et lorem..
                 </Typography>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item md={4}>
                 <SvgIcon component={Info} fontSize="large" />
                 <Typography>
                   Et diam sadipscing dolores kasd et elitr sanctus stet. Ipsum
@@ -60,7 +59,7 @@ function Home() {
                   elitr erat voluptua no.
                 </Typography>
               </Grid>
-              <Grid item xs={4}>
+              <Grid item md={4}>
                 <SvgIcon component={Info} fontSize="large" />
                 <Typography>
                   Elitr sadipscing dolor ipsum sanctus takimata at voluptua, est
@@ -95,11 +94,11 @@ function Home() {
 
           <Box mx={5} mt={8}>
             <Grid container direction="row" justify="space-around" spacing={10}>
-              <img src={logo} alt="logo" width="150" />
-              <img src={logo} alt="logo" width="150" />
-              <img src={logo} alt="logo" width="150" />
-              <img src={logo} alt="logo" width="150" />
-              <img src={logo} alt="logo" width="150" />
+              <img src="./cabelim-logo.png" alt="logo" width="150" />
+              <img src="./cabelim-logo.png" alt="logo" width="150" />
+              <img src="./cabelim-logo.png" alt="logo" width="150" />
+              <img src="./cabelim-logo.png" alt="logo" width="150" />
+              <img src="./cabelim-logo.png" alt="logo" width="150" />
             </Grid>
           </Box>
         </Container>
