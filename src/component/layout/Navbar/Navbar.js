@@ -1,6 +1,13 @@
 import { Box, Container, Tabs, Tab, Grid } from "@material-ui/core";
+import React from "react";
 
 function Navbar() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
   return (
     <Container>
       <Grid container direction="row" justify="center" alignItems="center">
@@ -9,9 +16,13 @@ function Navbar() {
         </Grid>
         <Grid item xs={8}>
           <Box display="flex" justifyContent="center">
-            <Tabs value="1">
+            <Tabs
+              value={value}
+              indicatorColor="primary"
+              onChange={handleChange}
+            >
+              <Tab label="Home" />
               <Tab label="Store" />
-              <Tab label="About" />
               <Tab label="Contact" />
             </Tabs>
           </Box>
