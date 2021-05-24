@@ -1,11 +1,35 @@
-import { Box, Container, Tabs, Tab, Grid, Hidden } from "@material-ui/core";
 import React from "react";
+import { useHistory } from "react-router";
+import { Box, Container, Tabs, Tab, Grid, Hidden } from "@material-ui/core";
 
-function Navbar() {
-  const [value, setValue] = React.useState(0);
+function Navbar(props) {
+  const history = useHistory();
+  const [navIndex, setNavIndex] = React.useState(() => {
+    switch (history.location.pathname) {
+      case "/":
+        return 0;
+      case "/store":
+        return 1;
+      case "/contact":
+        return 2;
+      default:
+        return false;
+    }
+  });
 
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
+  const handleChange = (event, index) => {
+    setNavIndex(index);
+    switch (index) {
+      case 1:
+        history.push("/store");
+        break;
+      case 2:
+        history.push("/contact");
+        break;
+      default:
+        history.push("/");
+        break;
+    }
   };
 
   return (
@@ -22,9 +46,11 @@ function Navbar() {
         <Grid item xs={8}>
           <Box display="flex" justifyContent="center">
             <Tabs
-              value={value}
+              value={navIndex}
               indicatorColor="secondary"
               onChange={handleChange}
+              variant="scrollable"
+              scrollButtons="auto"
             >
               <Tab label="Home" style={{ minHeight: "72px" }} />
               <Tab label="Store" style={{ minHeight: "72px" }} />

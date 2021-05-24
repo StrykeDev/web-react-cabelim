@@ -1,11 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "@fontsource/roboto";
-import "./index.css";
-import App from "./component/App";
+import { BrowserRouter } from "react-router-dom";
 
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core";
 import { amber, grey } from "@material-ui/core/colors";
+import "@fontsource/roboto";
+
+import App from "./component/App";
+
+import "./index.css";
 
 const theme = createMuiTheme({
   palette: {
@@ -22,7 +25,9 @@ const theme = createMuiTheme({
 ReactDOM.render(
   <React.StrictMode>
     <MuiThemeProvider theme={theme}>
-      <App />
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
     </MuiThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")
