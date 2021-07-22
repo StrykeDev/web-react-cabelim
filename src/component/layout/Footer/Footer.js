@@ -16,6 +16,9 @@ function Footer() {
         state. Your use of this website constitutes acceptance of the Terms of
         Use, Supplemental Terms, Privacy Policy and Cookie Policy. Do Not Sell
         My Personal Information
+        <br />
+        <br />
+        Powerline photo by Ventill8 Productions from Pexels.
       </Typography>
     </Container>
   );

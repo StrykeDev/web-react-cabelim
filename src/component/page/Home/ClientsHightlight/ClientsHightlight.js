@@ -41,35 +41,33 @@ function ClientsHightlight() {
       }}
     >
       <Box py={10}>
-        <Fade in={fadeIn} timeout={1000}>
-          <Container>
-            <Box textAlign="center" mb={3}>
-              <Typography variant="h4">Our happy clients</Typography>
-              <Typography variant="subtitle1">
-                Thank you for choosing us!
-              </Typography>
-            </Box>
+        <Container>
+          <Box textAlign="center" mb={3}>
+            <Typography variant="h4">Our happy clients</Typography>
+            <Typography variant="subtitle1">
+              Thank you for choosing us!
+            </Typography>
+          </Box>
 
-            <Box display="flex" flexWrap="wrap" justifyContent="center">
-              {clients.map((client, index) => (
-                <Fade
-                  in={true}
-                  timeout={1000}
-                  style={{ transitionDelay: index * 250 }}
-                  key={index}
-                >
-                  <img
-                    src={client.logo}
-                    alt={client.name}
-                    height="100%"
-                    width="128"
-                    style={{ margin: "5px 15px" }}
-                  />
-                </Fade>
-              ))}
-            </Box>
-          </Container>
-        </Fade>
+          <Box display="flex" flexWrap="wrap" justifyContent="center">
+            {clients.map((client, index) => (
+              <Fade
+                in={fadeIn}
+                timeout={500}
+                style={{ transitionDelay: index * 250 }}
+                key={index}
+              >
+                <img
+                  src={client.logo}
+                  alt={client.name}
+                  height="100%"
+                  width="128"
+                  style={{ margin: "5px 15px" }}
+                />
+              </Fade>
+            ))}
+          </Box>
+        </Container>
       </Box>
     </VizSensor>
   );

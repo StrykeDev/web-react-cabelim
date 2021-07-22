@@ -5,6 +5,7 @@ import header from "./asset/header.png";
 
 function HomeHeader() {
   const headerBackground = {
+    backgroundColor: "#2d2d2d",
     backgroundImage: `url(${header})`,
     backgroundPosition: "center",
     backgroundSize: "cover",
@@ -27,9 +28,9 @@ function HomeHeader() {
   useEffect(resizeHeader);
 
   return (
-    <Box style={{ backgroundColor: "#eee" }}>
-      <Container style={headerBackground}>
-        <Box id="header" px={1} py={10} width="50%">
+    <Box style={headerBackground}>
+      <Container>
+        <Box id="header" px={1} py={10} width="50%" color="white">
           <Fade in={true} timeout={500} style={{ transitionDelay: 500 }}>
             <Typography variant="h3">Powering people</Typography>
           </Fade>
