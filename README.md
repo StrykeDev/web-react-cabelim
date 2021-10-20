@@ -5,7 +5,7 @@
 
 # Cabelim
 
-A React home page made for practicing purposes.
+A React company page made for practicing purposes.
 
 ## Installation
 
